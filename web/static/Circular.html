@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/circular-style.css">
+
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script src="./js/jquery-2.2.3.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+	<script>
+		 function show(num)
+        {
+            for(var i=1; i<=6; i++)
+            {
+                document.getElementById("d"+i).style.display="none";
+            }
+            document.getElementById("d"+num).style.display="block";
+        }
+	</script>
+</head>
+<body onload="show(5)">
+<div class="circularzong">
+    <div class="cmain">
+        <div class="cmain1" style="width:250px;height:85px;float:left;">
+        <img src="./imgages/logo.png" style="width:250px;height:85px;">
+    </div>
+        <div class="cmain2" algin="right">
+        <ul class="cul1">
+            <li id="cm1">
+                <p class="con"></p>
+                <a style="color: forestgreen;" href="first.html">
+                    <em style="text-align: center;color: forestgreen;">home<br><b>首页</b></em>
+                </a>
+            </li>
+            <li id="cm2">
+                <p style="color: transparent;/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                <a href="lawpolicies.html">
+                    <em style="text-align: center;">law policies<br><b>法规政策</b></em>
+                </a>
+            </li>
+            <li id="cm3">
+                <p style="color: transparent;/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                <a href="Circular.html">
+                    <em style="text-align: center;">Circular<br><b>循环农业</b></em>
+                </a>
+            </li>
+            <li id="cm4" class="dropdown">
+                <p style="color: transparent;/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                <a href="protecte.html">
+                    <em style="text-align: center;">Protecte<br><b>环保农业</b></em>
+                </a>
+            </li>
+            <li id="cm5" class="dropdown1">
+                <p style="color: transparent;/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                <a href="recycle.html">
+                    <em style="text-align: center;">Recycle<br><b>变废为宝</b></em>
+                </a>
+            </li>
+            <li id="cm6">
+                <p style="color: transparent;/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                <a href="result.html">
+                    <em style="text-align: center;">Result<br><b>研究成果</b></em>
+                </a>
+            </li>
+            <li id="cm7">
+                <p style="color: transparent;/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                <a href="buy shell.html" target="_parent">
+                    <em style="text-align: center;">Buy Sell<br><b>你需我求</b></em>
+                </a>
+            </li>
+            <li id="cm8">
+                <p style="color: transparent;/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                <a type="button" data-toggle="modal" data-target="#myModal">
+                    <em style="cursor:pointer;text-align: center;">login<br><b>登录/注册</b></em>
+                </a>
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog" id="myModalDialog">
+                        <div class="modal-content" style="width:460px;height:420px;">
+                            <div class="modal-header" style="height:81px;background-color: #09a3dc;">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="myModalLabel" style="line-height:55px;color: white;">登录</h4>
+                            </div>
+                            <div class="modal-body" style="height:155px;">
+                                <form method="post" action="first.js" style="margin-top: 40px;">
+                                    <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;border: 1px solid gray;">
+                                        <span class="glyphicon glyphicon-phone" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                        <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                               type="text" id="username" class="username" placeholder=" 手机号"/>
+                                    </p>
+                                    <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;margin-top:18px;border: 1px solid gray;">
+                                        <span class="glyphicon glyphicon-lock" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                        <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                               type="password" id="password" class="password" placeholder=" 密码"/>
+                                    </p><br>
+                                    <a id="btn3" data-toggle="modal" style="cursor:pointer;">管理员登录</a>
+                                    <a id="btn2" data-toggle='modal' style="cursor:pointer;margin-left: 120px;">立即注册</a><br><br><br>
+                                    <button style="width:170px;margin-top: 10px;background-color: #09a3dc;color: white;" type="button" id="login_btn" onclick="check_valid()" class="btn">登录</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="myModal2">
+                    <div class="modal-dialog" id="myModalDialog2">
+                        <div class="modal-content" style="width:460px;height:500px;">
+                            <div class="modal-header" style="height:81px;background-color: #09a3dc;">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="myModalLabel2" style="line-height: 55px;color:white;">注册</h4>
+                            </div>
+                            <div class="modal-body" style="height:155px;">
+                                <form method="post" action="first.js">
+                                    <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;margin-top:30px;border: 1px solid gray;">
+                                        <span class="glyphicon glyphicon-phone" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                        <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                               type="text" id="username2" placeholder=" 手机号"/>
+                                    </p>
+                                    <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;margin-top:10px;border: 1px solid gray;">
+                                        <span class="glyphicon glyphicon-user" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                        <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                               type="text" id="nicheng" placeholder=" 昵称"/>
+                                    </p>
+                                    <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;margin-top:10px;border: 1px solid gray;">
+                                        <span class="glyphicon glyphicon-lock" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                        <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                               type="password" id="password2" placeholder=" 密码"/>
+                                    </p>
+                                    <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;margin-top:10px;border: 1px solid gray;">
+                                        <span class="	glyphicon glyphicon-envelope" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                        <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                               type="email" id="email1" placeholder=" 邮箱"/>
+                                    </p>
+                                    <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;margin-top:10px;border: 1px solid gray;">
+                                        <span class="	glyphicon glyphicon-envelope" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                        <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                               type="text" id="home" placeholder=" 生源地"/>
+                                    </p><br>
+                                    <button style="width:170px;margin-top: 30px;background-color: #09a3dc;color: white;" type="button" id="ok_btn" onclick="check_validr();" class="btn btn-primary">注册</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="myModal3">
+                    <div class="modal-dialog" id="myModalDialog3">
+                        <div class="modal-content" style="width:460px;height:420px;">
+                            <div class="modal-header" style="height:81px;background-color: #09a3dc;">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="myModalLabel3" style="line-height:55px;color: white;">管理员登录</h4>
+                            </div>
+                            <div class="modal-body" style="height:155px;">
+                                <form method="post" action="first.js" style="margin-top: 40px;">
+                                    <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;border: 1px solid gray;">
+                                        <span class="glyphicon glyphicon-phone" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                        <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                               type="text" id="username3" class="username3" placeholder=" 手机号"/>
+                                    </p>
+                                    <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;margin-top:18px;border: 1px solid gray;">
+                                        <span class="glyphicon glyphicon-lock" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                        <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                               type="password" id="password3" class="password3" placeholder=" 密码"/>
+                                    </p><br>
+                                    <button style="width:170px;margin-top: 60px;background-color: #09a3dc;color: white;" type="button" id="adminlogin_btn" onclick="check_validadmin()" class="btn">管理员登录</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li id="cm9">
+                <p style="color: transparent;width:80px;/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                <a href="forum.html" target="_parent">
+                    <em style="text-align: center;">Forum<br><b>论坛</b></br></em>
+                </a>
+            </li>
+        </ul>
+    </div>
+        <div id="cmain3"></div>
+    </div>
+    <div class="circularindex">
+        <div class="circularindex1">
+            <div class="circularindex2">
+                <h3 style="width:280px;margin-top: 11px;margin-bottom:0px;text-align: center;">循环农业列表</h3><hr style="color: gray;">
+                <ul id="menu" style="padding-left: 30px;margin-top: 40px;width:230px;height:160px;">
+                    <li>
+                        <a href="#" onclick="show(5)">生态循环农业</a>
+                    </li>
+                    <li style="margin-top: 20px;">
+                        <a href="#" onclick="show(6);">微生态循环农业</a>
+                    </li>
+                </ul>
+                    <div class="subNav1 currentDd1 currentDt1">生态循环农业的几种模式</div>
+                    <ul class="navContent1" style="padding-left:70px;display: none;">
+                        <li>
+                            <a type="button" onclick="show(1);">猪-沼-菜模式</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="show(2);">鱼-桑-鸡模式</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="show(3);">鸡-猪-鱼模式</a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="show(4);">牛-蘑菇-蚯蚓-鸡-猪-鱼模式</a>
+                        </li>
+                    </ul>
+                    <!--<div class="circularindex3">
+                        <div id="d1">
+                            <img src="./imgages/zzc.jpg">
+                        </div>
+                    </div>-->
+            </div>
+        </div>
+        <div id="content" class="circularindex3">
+            <!--<iframe name="iframe-a"></iframe>-->
+            <div id="d1" style="" class="holder">
+                <a type="button" data-toggle="modal" data-target="#mymodal4">
+                    <img src="./imgages/zzc.jpg" style="margin-bottom:3px;margin-right:15px;width: 310px;height: 200px;float: left;">
+                </a>
+                <div class="modal fade" id="mymodal4">
+                    <div class="modal-dialog" id="mymodaldialog4">
+                        <div class="modal-content">
+                            <div class="modal-body" style="padding: 0px;">
+                                <img src="./imgages/zzc1.gif">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <br><p style="line-height: 30px;text-indent:40px;">一户建一口６-８立方米沼气池，养２头以上的猪，配套１亩左右的露地菜，猪粪入池，沼肥种菜，以沼渣作底
+                        肥，沼液作追肥，通过沼液叶面喷施来抑虫防病。也可采用“猪－沼－大棚蔬菜”模式：在０.８亩塑料大棚内建 ８立方米沼
+                        气池，饲养３-５头猪人畜粪便进入沼气池内，沼气烧饭或为棚内生产照明、升温，为蔬菜生产提供肥源；沼渣、液过管网
+                        做肥料改良<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #09a3dc;margin-left: 7px;">#点击图片查看动图#</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;土壤；棚内生产基本不施化肥，农药量也大大减少，增产幅度２０％-３０％，且品质大大提高。由于猪舍沼气池建在日光温室内，
+                        猪生长快且节省饲料，增加了养猪的经济效益。畜禽粪便既是一个严重的环境污染源，但又是一种宝贵的资源。
+                        通过沼气设施处理，可以生产沼气、沼液、有机肥。沼气可用做燃料，发电、照明、煮饭；沼液、有机肥可用于蔬菜生产，
+                        形成猪—沼—菜的能源生态模式，不仅可解决污染问题，还可为农民提供清洁能源，为居民提供优质无公害的蔬菜，
+                        既能带来巨大的社会效益和生态效益，又能使企业实现可观的经济效益</p>
+                </div>
+            </div>
+            <div id="d2" style="" class="holder">
+                <a type="button" data-toggle="modal" data-target="#mymodal5">
+                    <img src="./imgages/ysj.jpg" style="margin-bottom:3px;margin-right:15px;width: 310px;height: 200px;float: left;">
+                </a>
+                <div class="modal fade" id="mymodal5">
+                    <div class="modal-dialog" id="mymodaldialog5">
+                        <div class="modal-content">
+                            <div class="modal-body" style="padding: 0px;">
+                                <img src="./imgages/ysj1.gif">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <br><p style="line-height: 30px;text-indent:40px;">   池塘内养鱼，塘四周种桑树，桑园内养鸡。
+                        鱼池淤泥及鸡粪作桑树肥料，蚕蛹及桑叶喂鸡，蚕粪喂鱼，使桑、鱼、
+                        鸡形成良好的生态循环。试验表明，每 ５０００千克桑叶喂蚕，蚕粪喂鱼，可增加鱼产量２５千克，年产鸡粪
+                        １２００ 千克， 相当于给桑园施标准氮肥１８千克，磷肥１７.５千克。桑基鱼塘作为一种特有的农业生产经营模式，
+                        成熟于明代后期、清代<span style="color: #09a3dc;margin-left: 7px;">#点击图片查看动图#</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;初期的太湖—杭嘉湖地区、珠江三角洲地区。它是根据当地的地理、气候、水陆条件、特产资源，
+                        利用生物多样化和它们的互生关系，以及动物食物链体系，将种、养相结合的生态农业综合经营模式。
+                        主要方式是通过凿池挖塘，培养桑基，基上植桑，塘里养鱼，蚕食桑叶，鱼食蚕粪，塘泥壅田、培桑，
+                        塘内余水还可用于灌溉。循环交替，数利俱获。在增加经济效益的同时，很好地维护和平衡着农业生态关系。
+                        在循环发展的生态农业经营方式的不断探索和尝试下，不断得以完善和成熟，逐渐形成因地制宜，生产方式多样化、
+                        生物方式多样性和文化多样性为一体的农业生态系统。
+                        </p>
+                </div>
+            </div>
+            <div id="d3" style="" class="holder">
+                <a type="button" data-toggle="modal" data-target="#mymodal6">
+                    <img src="./imgages/jzy.jpg" style="margin-bottom:3px;margin-right:15px;width: 310px;height: 200px;float: left;">
+                </a>
+                <div class="modal fade" id="mymodal6">
+                    <div class="modal-dialog" id="mymodaldialog6">
+                        <div class="modal-content">
+                            <div class="modal-body" style="padding: 0px;">
+                                <img src="./imgages/jzy1.gif">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <br><p style="line-height: 30px;text-indent:40px;">   饲料喂鸡，鸡粪喂猪，猪粪发酵后喂鱼，塘泥作肥料。
+                        以年养１００ 只鸡计算，将鸡粪喂猪，可增产猪肉１００ 千克，猪粪喂鱼可增捕成鱼５０千克，加上塘泥作肥料，
+                        合计可增收１０００ 元。鸡猪鱼立体养殖模式的设计要紧紧围绕着"饲料-养鸡-鸡粪-养猪-猪粪-养鱼"的链条来执行，
+                        具体有三大部分：一是池塘中养鱼，以猪粪混合其他饲料肥水养殖；二是塘<span style="color: #09a3dc;margin-left: 7px;">#点击图片查看动图#</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;基上建猪圈，要考虑猪粪的收集；
+                        三是塘基上建鸡舍，考虑鸡粪的收集。现在以一个10亩的鱼塘为例对立体养殖模式内容进行说明。粪便收集与处理。
+                        粪便处理要遵循的原则是：消灭病源微生物，确保营养不流失。可采用的处理方法有自然干燥法和发酵法。
+                        前一种方法中，将粪便拿到阳光下暴晒，待水分降到13%左右时即将粪便收储备用；后一种方法中，
+                        将新鲜的粪便堆垛起来，密封，并保持环境温度在15度以上，待发酵温度到45度时，将粪便翻垛，再次发酵，
+                        直到内外温度一致时，证明发酵完成，可储存备用。</p>
+                </div>
+            </div>
+            <div id="d4" style="" class="holder">
+                <a type="button" data-toggle="modal" data-target="#mymodal7">
+                    <img src="./imgages/nmjzy.jpg" style="margin-bottom:3px;margin-right:15px;width: 310px;height: 200px;float: left;">
+                </a>
+                <div class="modal fade" id="mymodal7">
+                    <div class="modal-dialog" id="mymodaldialog7">
+                        <div class="modal-content">
+                            <div class="modal-body" style="padding: 0px;">
+                                <img src="./imgages/ny.gif">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <br><p style="line-height: 30px;text-indent:40px;">  利用杂草、稻草或牧草喂牛，牛粪作蘑菇培养料，
+                        用蘑菇采收后的下脚料繁殖蚯蚓，蚯蚓喂鸡，鸡粪发酵后喂鱼，鱼塘淤泥作肥料。秸秆经氨化、
+                        碱化或糖化处理后喂家畜，家畜粪便和饲料残渣制沼气或培养食用菌，食用菌下脚料繁殖蚯蚓，蚯蚓喂鸡，
+                        鸡粪发酵后喂猪，猪粪发酵后喂鱼，沼气渣和猪粪养蚯蚓，将残留物养鱼或作肥料。家畜的粪便喂蝇蛆，
+                        蝇<span style="color: #09a3dc;margin-left: 7px;">#点击图片查看动图#</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;蛆是鸡的高蛋白质饲料，鸡粪发酵后喂牛，牛粪喂鱼，鱼塘淤泥是优质有机肥料。这种模式利用农作物秸秆喂牛，
+                        牛粪发酵做基料种植蘑菇，采收蘑菇后的基料再养殖蚯蚓，蚯蚓喂鸡，鸡粪经过发酵后再喂猪，猪粪经过发酵后再喂鱼，
+                        鱼塘里的塘泥作种植业的肥料。秸秆经处理后喂养家畜，家畜粪便用于生产沼气或培养食用菌，食用菌下脚料养蚯蚓，
+                        蚯蚓喂鸡，鸡粪发酵后喂猪，沼渣和猪粪养鱼或作肥料。家畜粪便养殖蝇虫，蝇虫喂鸡，鸡粪再处理后喂猪，
+                        猪粪经发酵后喂鱼，塘泥作肥料。利用野草、稻草或牧草喂牛。将杂草、稻草或牧草氨化处理后喂牛，牛粪发酵后喂鱼，
+                        塘泥作农田肥料。２头牛的粪可饲喂１亩水面塘鱼，年增产成鱼２００千克。</p>
+                </div>
+            </div>
+            <div id="d5" style="" class="holder">
+                <a type="button">
+                    <img src="./imgages/nmjzy.jpg" style="margin-bottom:3px;margin-right:15px;width: 310px;height: 200px;float: left;">
+                </a>
+                <div>
+                    <br><p style="line-height: 30px;text-indent:40px;">生态农业是伴随着整个农业生产的不断发展而逐步形成的一种全新农业。
+                        为了搞好生态农业建设，一方面要注重总结与推广我国传统农业中适于生态农业的经验和做法，
+                        比如：合理轮作、种植绿肥、施用有机肥、横坡打拢、修建水平横田等等。这些都是广大农民十分熟
+                        悉并且愿意接受的措施；另一方面，要加紧研究与大力推广先进的生态农业新技术，如：
+                        为了减少白色污染而研制的光解膜、生物农药、生物化肥、秸秆还田、节水灌溉等等。实践表明：
+                        在生态农业建设中，只有两个方面的措施结合起来了，效果才能更好。农业生态系统作为一种人
+                        工生态系统，同人类的社会经济领域密切不可分割。大量的农产品离开农业系统,源源不断地进入社会经济领域;
+                        而大量的农用物资包括化肥、农药、农业机械等又作为辅助能量，源源不断地从社会经济领域投入农业系统。
+                        这种物质、能量的投入和产出的数量因不同的物质技术水平和农业经营方式而异，归根到底受不同的社会经济条
+                        件的制约。由此决定了农业生态系统的社会性，它不仅受自然规律，而且受社会经济规律的支配。生态循环农业,
+                        可以说是个顶天立地的大农业。因此，要完成这项十分繁杂而又艰巨的任务，必须坚持“农林牧副渔并举，
+                        山水林田路综合治理”的原则，在调查研究的基础上，搞好建设规划，因地制宜地推广不同类型的生态农业建设模式。</p>
+                </div>
+            </div>
+            <div id="d6" style="" class="holder">
+                <a type="button">
+                    <img src="./imgages/nmjzy.jpg" style="margin-bottom:3px;margin-right:15px;width: 310px;height: 200px;float: left;">
+                </a>
+                <div>
+                    <br><p style="line-height: 30px;text-indent:40px;">微生态循环农业已在绵阳涪城区开始初步应用，
+                    主要运行模式为:用当地的采收后的油菜杆，采收后的麦秆用机器将其打碎成1—2cm的节，然后作为养殖微生态
+                    鸡的垫料，应用微生物分解米糠，麦麸，菜籽饼等，用于饲喂微生态鸡，当鸡养殖到2斤左右的时候，将鸡赶如
+                    山林，大部分饲喂微生物处理后的微生态饲料，少部分饲喂蚯蚓，黄粉虫，牧草等。当鸡赶出后，留在圈舍的垫
+                    料，一部分留在圈舍类将其翻挖，用薄膜掩盖发酵15日，一部分垫料通过生物发酵后用于养殖蚯蚓，一部分用于
+                    种植牧草，苗木，水果。</p><h4 style="margin-left:20px;margin-top:0px;margin-bottom:0px;float: left;">特点：</h4>
+                    <p>1.在该模式的运行中都利用的副产物，所以生产成本较低。<br>
+                    2.该模式部分解决了动物与人争粮食的问题。<br>
+                    3.该模式中所产生的动物废弃物又用于种植，将蔬菜种植，苗木种植，水果种植的成本降到较低水平。<br>
+                    4.在生产过程中充分保证了种植类产品的安全</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    /*var list=["生态循环农业","微生态循环农业"];
+
+    window.onload=function(){
+        var menu=document.getElementById("menu");
+        for(i=0;i<list.length;i++){
+            var x=list[i];
+            var list1 = "<li>" +"<a onclick=\"myfunction("+i+")\">" + x + "</a>"+"</li>";
+            alert(list1);
+            document.getElementById("menu").innerHTML+=list1;
+        }
+
+    };*/
+    /*var temp1 = "<div id='zong' style='width:702px;height:496px;'>aaa<div id='imgage' style='width:310px;height:200px;float:left;'>bbb</div></div>";
+    var temp2 = "<div>bbb<div style='width:310px;height:200px;float:left;'>aaa</div></div>"*/
+   /* function myfunction() {
+        $.ajax({
+            type:'post',
+            url:'30-mysql-select-1.php',
+            success:function (data,status) {
+                $(".circularindex3").empty();
+                var yihuifang = "";
+
+                //console.log(data);
+                var data=JSON.parse(data);
+                console.log("aaaaaaaaaa");
+                console.log(data);
+                $.each(data,function (index,value) {
+                    $(".circularindex3").empty();
+                    //yihuifang +=value.content;
+                    /!*$("#imgage").append(value.title);
+                    $("#zong").append(value.content);*!/
+                    var mewr = temp1.replace(/bbb/g,value.title);
+                    var newr = temp1.replace(/aaa/g,value.content);
+                    $("#wenzi").append(mewr);
+                    $(".circularindex3").append(newr);
+                    $("#imgage").append(mewr);
+                    $(".zong").append(newr);
+                });
+                //$("#circularindex3").append(temp1);
+
+               //$(".circularindex3").append(yihuifang)
+            }
+        })
+    }*/
+   /*function myfunction(id) {
+       $.ajax({
+           type:'post',
+           url:'30-mysql-select-1.php',
+           success:function (data,status) {
+               var data1=JSON.parse(data);
+               $("#circularindex3").empty();
+                console.log(data1);
+
+
+
+               var value1=data1[id];
+                console.log(value1.title);
+               document.getElementById("wenzi").innerHTML=value1.title;*/
+   /* $.each(data1,function (index,value1){
+                   /!*!//$("#circularindex3").empty();
+                   /!*$("#imgage").append(value.title);
+                   $("#zong").append(value.content);*!/
+                   //$("#circularindex3").append(temp1);*!/
+
+                  document.getElementById("wenzi").innerHTML=value1.title;
+                  //console.log(value1.title);
+                  $("#circularindex3").empty();
+
+               })*/
+    
+</script>
+<script type="text/javascript" src="./js/first.js"></script>
+<script type="text/javascript" src="./js/circular.js"></script>
+</body>
+</html>

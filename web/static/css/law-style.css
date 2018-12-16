@@ -1,0 +1,134 @@
+body{
+    margin-top:0px;
+}
+.lawzong{
+    width: calc(1130px - 10%);
+    height:600px;
+    text-align:center;
+    padding:0px;
+    margin: 0 auto;
+}
+.main{
+    width: calc(1100px - 10%);
+    height:120px;
+    color:#fff;
+    text-align:center;
+    padding:0px;
+    margin: 0 auto;
+    background-image: url("../imgages/banner1.jpg");
+    background-size:100%,100%;
+    background-repeat: no-repeat;
+}
+.main2{
+    width:815px;
+    margin-left: 288px;
+}
+.ul1{
+    height:90px;
+    margin: 0px;
+    padding:0px;
+}
+.on{
+    margin-bottom: 18px;
+}
+.ul1 li p{
+    height:10px;
+    margin-top: 0px;
+}
+.main2 .ul1 li{
+    width:78px;
+    height:90px;
+    list-style: none;
+    padding: 0;
+    margin:0;
+    float: left;
+    text-align: center;
+}
+.main2 .ul1 li a em{
+    color: black;
+    font-style: normal;
+    font-size: 15px;
+}
+.main2 .ul1 li a em:hover{
+    color: darkgreen;
+}
+a{
+    text-decoration:none;
+    color:black;
+}
+.lawindex{
+    height:510px;
+    width: calc(1100px - 10%);
+    text-align:center;
+    padding:0px;
+    margin: 0 auto;
+    border:1px solid #95C8F1;
+    margin-top: 5px;
+}
+.lawindex1{
+    width:300px;
+    height:508px;
+    top:90px;
+    left:40px;
+    float: left;
+    border-right:1px solid #95C8F1;
+    background-image: url("../imgages/111111.jpg");
+    background-size:100% 100%;
+}
+.lawindex2{
+    width:299px;
+    height:50px;
+    position: absolute;
+    top:145px;
+}
+.lawindex2 ul li{
+    width:100px;
+    font-size: 16px;
+    list-style: none;
+}
+.lawindex2 ul li #law1 #la{
+    height:100px;
+}
+.lawindex2 ul li #law1 #la li{
+    height:28px;
+}
+.lawindex2 ul li #law1 #la li a{
+    color: #66afe9;
+}
+#law1{
+    height:100px;
+    margin-top:10px;
+}
+#law2{
+    margin-top:10px;
+    padding-left: 55px;
+}
+.lawindex3{
+    width:680px;
+    height:435px;
+    margin-top: 17px;
+    margin-left: 310px;
+    border:1px solid gainsboro;
+}
+h4{
+    margin-left: 325px;
+    width:630px;
+    height:37px;
+    line-height: 37px;
+    text-align: left;
+    margin-bottom: 0px;
+    background-color: #95C8F18f;
+}
+h4 span{
+    padding-left:15px;
+}
+h4 a{
+    font-size: 14px;
+    margin-left: 460px;
+    color: #049;;
+}
+#lawmain{
+    width:200px;
+    height:30px;
+    margin-left: 760px;
+}

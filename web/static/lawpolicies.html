@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/law-style.css">
+
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script src="./js/jquery-2.2.3.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+</head>
+<body>
+<div class="lawzong">
+    <div class="main">
+        <div class="main1" style="width:250px;height:85px;float:left;">
+            <img src="./imgages/logo.png" style="width:250px;height:85px;">
+        </div>
+        <div class="main2" algin="right">
+            <ul class="ul1">
+            <li id="m1">
+                <p class="on"></p>
+                <a style="color: forestgreen;" href="first.html">
+                    <em style="text-align: center;color: forestgreen;">home<br><b>首页</b></em>
+                </a>
+            </li>
+            <li id="m2">
+                <p style="color:transparent;/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                <a href="lawpolicies.html">
+                    <em style="text-align: center;">law policies<br><b>法规政策</b></em>
+                </a>
+            </li>
+            <li id="m3">
+                <p style="color:transparent;/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                <a href="Circular.html">
+                    <em style="text-align: center;">Circular<br><b>循环农业</b></em>
+                </a>
+            </li>
+            <li id="m4" class="dropdown">
+                <p style="color:transparent;/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                <a href="protecte.html">
+                    <em style="text-align: center;">Protecte<br><b>环保农业</b></em>
+                </a>
+            </li>
+            <li id="m5" class="dropdown1">
+                <p style="color:transparent;/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                <a href="recycle.html">
+                    <em style="text-align: center;">Recycle<br><b>变废为宝</b></em>
+                </a>
+            </li>
+            <li id="m6">
+                <p style="color:transparent;/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                <a href="result.html">
+                    <em style="text-align: center;">Result<br><b>研究成果</b></em>
+                </a>
+            </li>
+            <li id="m7">
+                <p style="color:transparent;/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                <a href="buy shell.html" target="_parent">
+                    <em style="text-align: center;">Buy Sell<br><b>你需我求</b></em>
+                </a>
+            </li>
+            <li id="m8">
+                <p style="color:transparent;/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                <a type="button" data-toggle="modal" data-target="#myModal">
+                    <em style="cursor:pointer;text-align: center;">login<br><b>登录/注册</b></em>
+                </a>
+                <div class="modal fade" id="myModal">
+                    <div class="modal-dialog" id="myModalDialog">
+                        <div class="modal-content" style="width:460px;height:420px;">
+                            <div class="modal-header" style="height:81px;background-color: #09a3dc;">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="myModalLabel" style="line-height:55px;color: white;">登录</h4>
+                            </div>
+                            <div class="modal-body" style="height:155px;">
+                                <form method="post" action="first.js" style="margin-top: 40px;">
+                                    <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;border: 1px solid gray;">
+                                        <span class="glyphicon glyphicon-phone" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                        <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                               type="text" id="username" class="username" placeholder=" 手机号"/>
+                                    </p>
+                                    <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;margin-top:18px;border: 1px solid gray;">
+                                        <span class="glyphicon glyphicon-lock" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                        <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                               type="password" id="password" class="password" placeholder=" 密码"/>
+                                    </p><br>
+                                    <a id="btn3" data-toggle="modal" style="cursor:pointer;">管理员登录</a>
+                                    <a id="btn2" data-toggle='modal' style="cursor:pointer;margin-left: 120px;">立即注册</a><br><br><br>
+                                    <button style="width:170px;margin-top: 10px;background-color: #09a3dc;color: white;" type="button" id="login_btn" onclick="check_valid()" class="btn">登录</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="myModal2">
+                    <div class="modal-dialog" id="myModalDialog2">
+                        <div class="modal-content" style="width:460px;height:500px;">
+                            <div class="modal-header" style="height:81px;background-color: #09a3dc;">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="myModalLabel2" style="line-height: 55px;color:white;">注册</h4>
+                            </div>
+                            <div class="modal-body" style="height:155px;">
+                                <form method="post" action="first.js">
+                                    <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;margin-top:30px;border: 1px solid gray;">
+                                        <span class="glyphicon glyphicon-phone" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                        <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                               type="text" id="username2" placeholder=" 手机号"/>
+                                    </p>
+                                    <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;margin-top:10px;border: 1px solid gray;">
+                                        <span class="glyphicon glyphicon-user" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                        <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                               type="text" id="nicheng" placeholder=" 昵称"/>
+                                    </p>
+                                    <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;margin-top:10px;border: 1px solid gray;">
+                                        <span class="glyphicon glyphicon-lock" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                        <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                               type="password" id="password2" placeholder=" 密码"/>
+                                    </p>
+                                    <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;margin-top:10px;border: 1px solid gray;">
+                                        <span class="	glyphicon glyphicon-envelope" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                        <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                               type="email" id="email1" placeholder=" 邮箱"/>
+                                    </p>
+                                    <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;margin-top:10px;border: 1px solid gray;">
+                                        <span class="	glyphicon glyphicon-envelope" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                        <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                               type="text" id="home" placeholder=" 生源地"/>
+                                    </p><br>
+                                    <button style="width:170px;margin-top: 30px;background-color: #09a3dc;color: white;" type="button" id="ok_btn" onclick="check_validr();" class="btn btn-primary">注册</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="myModal3">
+                    <div class="modal-dialog" id="myModalDialog3">
+                        <div class="modal-content" style="width:460px;height:420px;">
+                            <div class="modal-header" style="height:81px;background-color: #09a3dc;">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title" id="myModalLabel3" style="line-height:55px;color: white;">管理员登录</h4>
+                            </div>
+                            <div class="modal-body" style="height:155px;">
+                                <form method="post" action="first.js" style="margin-top: 40px;">
+                                    <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;border: 1px solid gray;">
+                                        <span class="glyphicon glyphicon-phone" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                        <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                               type="text" id="username3" class="username3" placeholder=" 手机号"/>
+                                    </p>
+                                    <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;margin-top:18px;border: 1px solid gray;">
+                                        <span class="glyphicon glyphicon-lock" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                        <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                               type="password" id="password3" class="password3" placeholder=" 密码"/>
+                                    </p><br>
+                                    <button style="width:170px;margin-top: 60px;background-color: #09a3dc;color: white;" type="button" id="adminlogin_btn" onclick="check_validadmin()" class="btn">管理员登录</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li id="m9">
+                <p style="color:transparent;width:80px;/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                <a href="forum.html" target="_parent">
+                    <em style="text-align: center;">Forum<br><b>论坛</b></br></em>
+                </a>
+            </li>
+        </ul>
+        </div>
+        <div id="lawmain"></div>
+    </div>
+    <div class="lawindex">
+        <div class="lawindex1">
+            <div class="lawindex2">
+                <h3 style="margin-top: 11px;margin-bottom:0px;text-align: center;">法规政策列表</h3>
+                    <ul style="margin-top: 40px;">
+                    <li>
+                        <b>中央法规</b>
+                        <div id="law1">
+                            <ul id="la">
+                                <li class="l1">
+                                    <a href="#" onclick="showlaw(2017);">2017</a>
+                                </li>
+                                <li class="l1">
+                                    <a href="#" onclick="showlaw(2016);">2016</a>
+                                </li>
+                                <li class="l1">
+                                    <a href="#" onclick="showlaw(2015);">2015</a>
+                                </li>
+                                <li class="l1">
+                                    <a href="law2.html">更多</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li style="margin-top: 15px;">
+                        <b>地方法规</b>
+                        <div id="law2">
+                            <select id="province" runat="server" onchange="selectprovince(this);"
+                                    style="border:0px; width:120px;height: 27px;background-color: transparent;border: 1px solid #8bc34a75;">
+                                <option value="1" selected>北京市</option>
+                                <option value="2">天津市</option>
+                                <option value="3">河北省</option>
+                                <option value="4">山西省</option>
+                                <option value="5">辽宁省</option>
+                                <option value="6">吉林省</option>
+                                <option value="7">上海市</option>
+                                <option value="8">江苏省</option>
+                                <option value="9">浙江省</option>
+                                <option value="10">江西省</option>
+                                <option value="11">重庆市</option>
+                                <option value="12">四川省</option>
+                                <option value="13">云南省</option>
+                                <option value="14">陕西省</option>
+                                <option value="15">甘肃省</option>
+                                <option value="16">青海省</option>
+                                <option value="17">内蒙古</option>
+                                <option value="18">黑龙江省</option>
+                                <option value="19">安徽省</option>
+                                <option value="20">福建省</option>
+                                <option value="21">广东省</option>
+                                <option value="22">海南省</option>
+                            </select><br>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <h4>
+            <span>法规动态</span>
+            <a href="law2.html" target="_blank">更多 >></a>
+        </h4>
+        <div class="lawindex3">
+
+        </div>
+    </div>
+</div>
+<script>
+
+    var temp="<tr>标题：<td style='height: 25px;float: left;' onclick=\"mylawfun(bbb)\"><li><a style='color: #2F5BB7;' href=\"javascript:;\">aaa</a></li></td></tr>";
+
+    function showlaw(num) {
+        $.ajax({
+            type:'post',
+            url:'116.196.91.8:8080/webtest/ServletZhengce',
+            data:num,
+            success:function (data,status) {
+                console.log(data);
+                $(".lawindex3").empty();
+                $.each(JSON.parse(data),function (index,value) {
+                    var lawt = temp.replace(/aaa/g,value.title).replace(/bbb/g,value.id);
+                    $(".lawindex3").append("lawt");
+                })
+            }
+        })
+    };
+
+    function mylawfun(id) {
+        location.href="showcontent.html?newsid="+id;
+    }
+
+    /*window.onload=function(){
+        var list3=document.getElementById("la").innerHTML;
+        var list4=list3.innerHTML;
+        console.log(list4);
+        $.each(list3,function (index,li,value) {
+            li.onclick=function () {
+                alert($this.text());
+            }
+        });
+        alert("aaaaaa");
+        //alert(x);
+        //alert(list4);
+        $.each(list3,function (index,li,array) {
+            li.onclick = function () {
+                var list=list3.innerHtml;
+                $.ajax({
+                    type:'post',
+                    url:'116.196.91.8:8080/webtest/ServletZhengce',
+                    data:list,
+                    success:function (data,status) {
+                        $("lawindex3").text("data");
+                    }
+                })
+            }
+        })
+    };*/
+</script>
+<script type="text/javascript" src="./js/first.js"></script>
+<script type="text/javascript" src="./js/law.js"></script>
+</body>
+</html>

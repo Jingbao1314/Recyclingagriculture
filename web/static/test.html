@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function createXmlHttpRequest() {
+            var xmlreq=false;
+            if(window.XMLHttpRequest){
+                xmlreq=new XMLHttpRequest("Msxml2.XMLHTTP");
+            }else if(window.ActiveXObject){
+                xmlreq=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            return xmlreq;
+        }
+        var submit1=function () {
+            var request=createXmlHttpRequest();
+            $.ajax({
+                type: "post",
+                url: 'ServletNewADD',
+                async: false,
+                data: JSON.stringify({
+                    title: ($('input[name="title"]').val()),
+                    content: ($('input[name="content"]').val())
+                }),
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function(data) {
+                    $('#result').text(data.result);
+                    }
+                })
+            }
+    </script>
+</head>
+<body>
+
+<input type="text" id="username" class="title" placeholder="标题"/><br>
+<input type="password" id="password" class="content" placeholder="内容" style="margin-top:10px;"/><br>
+<button type="button" id="login11" style="margin-top: 10px;margin-left:50px;"
+        onclick="submit1()">提交</button>
+</body>
+</html>

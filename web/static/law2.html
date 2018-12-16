@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.bootcss.com/vue/2.5.3/vue.min.js"></script>
+    <script type="text/javascript" src="./js/jquery-2.2.3.min.js"></script>
+
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/ace.min.css" />
+    <link rel="stylesheet" href="css/ace-rtl.min.css" />
+    <link rel="stylesheet" href="css/ace-skins.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="./css/law-style.css">
+
+    <style>
+        #pageBox{
+            width:calc(1100px - 10%);
+            margin:0 auto;
+        }
+    </style>
+
+</head>
+<body>
+<div class="main">
+    <div class="main1" style="width:250px;height:85px;float:left;">
+        <img src="./imgages/logo.png" style="width:250px;height:85px;">
+    </div>
+    <div class="main2" algin="right">
+        <ul class="ul1">
+            <li id="m1">
+                <p class="on"></p>
+                <a style="color: forestgreen;" href="first.html">
+                    <em style="text-align: center;color: forestgreen;">home<br><b>首页</b></em>
+                </a>
+            </li>
+            <li id="m2">
+                <p style="color:transparent;/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                <a href="lawpolicies.html">
+                    <em style="text-align: center;">law policies<br><b>法规政策</b></em>
+                </a>
+            </li>
+            <li id="m3">
+                <p style="color:transparent;/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                <a href="Circular.html">
+                    <em style="text-align: center;">Circular<br><b>循环农业</b></em>
+                </a>
+            </li>
+            <li id="m4" class="dropdown">
+                <p style="color:transparent;/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                <a href="protecte.html">
+                    <em style="text-align: center;">Protecte<br><b>环保农业</b></em>
+                </a>
+            </li>
+            <li id="m5" class="dropdown1">
+                <p style="color:transparent;/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                <a href="recycle.html">
+                    <em style="text-align: center;">Recycle<br><b>变废为宝</b></em>
+                </a>
+            </li>
+            <li id="m6">
+                <p style="color:transparent;/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                <a href="result.html">
+                    <em style="text-align: center;">Result<br><b>研究成果</b></em>
+                </a>
+            </li>
+            <li id="m7">
+                <p style="color:transparent;/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                <a href="buy shell.html" target="_parent">
+                    <em style="text-align: center;">Buy Sell<br><b>你需我求</b></em>
+                </a>
+            </li>
+            <li id="m9">
+                <p style="color:transparent;width:80px;/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                <a href="forum.html" target="_parent">
+                    <em style="text-align: center;">Forum<br><b>论坛</b></br></em>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="try">
+
+    <div id="lawcontainer">
+
+    </div>
+    <div id="pageBox">
+        <div class="message-footer clearfix " >
+            <div class="pull-left"> 总计 {{page.totalNo}} 条信息 </div>
+
+            <div class="pull-right">
+                <div class="inline middle"> page {{page.pageNo}} of {{page.page}} </div>
+
+                &nbsp; &nbsp;
+                <ul class="pagination middle">
+                    <li>
+                        <a href="javascript:;" @click='pageFrist(page.pageNo)'>
+                            <i class="icon-step-backward middle"></i>
+                        </a>
+                    </li>
+
+                    <li class='disabled' v-if="page.pageNo == 1">
+                        <a href="javascript:;">
+                            <i class="icon-caret-left bigger-140 middle"></i>
+                        </a>
+                    </li>
+                    <li v-else>
+                        <a href="javascript:;" @click='pagePrev(page.pageNo)'>
+                            <i class="icon-caret-left bigger-140 middle"></i>
+                        </a>
+                    </li>
+                    <li>
+							<span>
+								<input maxlength="3" id="page_input" value="{{page.pageNo}}" type="text" v-model="page.pageNo" @keyup.enter="pageInput()">
+							</span>
+                    </li>
+
+                    <li>
+                        <a href="javascript:;" @click='pageNext(page.pageNo)'>
+                            <i class="icon-caret-right bigger-140 middle"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="javascript:;" @click='pageLast(page.page)'>
+                            <i class="icon-step-forward middle"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var temp="<tr>标题：<td onclick=\"myfun(bbb)\"><a href=\"javascript:;\">aaa</a></td></tr>";
+
+    $(document).ready(function () {
+
+        courseShow('20','1');
+    });
+
+    function myfun(id){
+        location.href ="showcontent.html?newsid="+id;
+    }
+
+    function courseShow(pageSize,pageNo){
+        $.post("116.196.91.8:8080/webtest/ServletZhengce",
+                {
+                    pageSize:pageSize,//每页有几行
+                    pageNo:pageNo // 当前第几页
+                },
+                function(data,status){
+                    console.log(data);
+                    $(".container").empty();
+
+                    var courseData = JSON.parse(data);
+
+                    console.log(courseData);
+
+
+                    $.each(courseData.data, function(index, value) {
+                        var newt = temp.replace(/aaa/g,value.title).replace(/bbb/g,"'"+value.id+"'");
+                        $(".container").append(newt);
+                    });
+
+                    pageData = {totalNo:courseData.totalNo,pageNo:courseData.pageNo,page:courseData.page};
+
+                    vm_table.page = pageData;
+
+                    console.log(vm_table.page);
+                });
+    }
+
+    var pageData = new Object();
+
+    var vm_table = new Vue({
+        el:'#try',
+        data:{
+            page:pageData
+        },
+        methods:{
+            pageNext: function(page){
+                courseShow('20',parseFloat(page)+1+'');
+            },
+            pagePrev: function(page){
+                courseShow('20',parseFloat(page)-1+'');
+            },
+            pageLast: function(page){
+                courseShow('20',parseFloat(page)+'');
+            },
+            pageFrist: function(){
+                courseShow('20','1');
+            },
+            pageInput: function(){
+                courseShow('20',$('#page_input').val()+'');
+            }
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/result-style.css">
+
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script src="./js/jquery-2.2.3.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script>
+    </script>
+</head>
+<body>
+<div class="resultzong">
+    <div class="rmain">
+        <div class="rmain1" style="width:250px;height:85px;float:left;">
+        <img src="./imgages/logo.png" style="width:250px;height:85px;">
+    </div>
+        <div class="rmain2" algin="right">
+            <ul class="rul1">
+                <li id="rm1">
+                    <p class="ron"></p>
+                    <a style="color: forestgreen;" href="first.html">
+                        <em style="text-align: center;color: forestgreen;">home<br><b>首页</b></em>
+                    </a>
+                </li>
+                <li id="rm2">
+                    <p style="/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                    <a href="lawpolicies.html">
+                        <em style="text-align: center;">law policies<br><b>法规政策</b></em>
+                    </a>
+                </li>
+                <li id="rm3">
+                    <p style="/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                    <a href="Circular.html">
+                        <em style="text-align: center;">Circular<br><b>循环农业</b></em>
+                    </a>
+                </li>
+                <li id="rm4" class="dropdown">
+                    <p style="/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                    <a href="protecte.html">
+                        <em style="text-align: center;">Protecte<br><b>环保农业</b></em>
+                    </a>
+                </li>
+                <li id="rm5" class="dropdown1">
+                    <p style="/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                    <a href="recycle.html">
+                        <em style="text-align: center;">Recycle<br><b>变废为宝</b></em>
+                    </a>
+                </li>
+                <li id="rm6">
+                    <p style="/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                    <a href="result.html">
+                        <em style="text-align: center;">Result<br><b>研究成果</b></em>
+                    </a>
+                </li>
+                <li id="rm7">
+                    <p style="/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                    <a href="buy shell.html" target="_parent">
+                        <em style="text-align: center;">Buy Sell<br><b>你需我求</b></em>
+                    </a>
+                </li>
+                <li id="rm8">
+                    <p style="/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                    <a type="button" data-toggle="modal" data-target="#myModal">
+                        <em style="cursor:pointer;text-align: center;">login<br><b>登录/注册</b></em>
+                    </a>
+                    <div class="modal fade" id="myModal">
+                        <div class="modal-dialog" id="myModalDialog">
+                            <div class="modal-content" style="width:460px;height:420px;">
+                                <div class="modal-header" style="height:81px;background-color: #09a3dc;">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title" id="myModalLabel" style="line-height:55px;color: white;">登录</h4>
+                                </div>
+                                <div class="modal-body" style="height:155px;">
+                                    <form method="post" action="first.js" style="margin-top: 40px;">
+                                        <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;border: 1px solid gray;">
+                                            <span class="glyphicon glyphicon-phone" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                            <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                                   type="text" id="username" class="username" placeholder=" 手机号"/>
+                                        </p>
+                                        <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;margin-top:18px;border: 1px solid gray;">
+                                            <span class="glyphicon glyphicon-lock" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                            <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                                   type="password" id="password" class="password" placeholder=" 密码"/>
+                                        </p><br>
+                                        <a id="btn3" data-toggle="modal" style="cursor:pointer;">管理员登录</a>
+                                        <a id="btn2" data-toggle='modal' style="cursor:pointer;margin-left: 120px;">立即注册</a><br><br><br>
+                                        <button style="width:170px;margin-top: 10px;background-color: #09a3dc;color: white;" type="button" id="login_btn" onclick="check_valid()" class="btn">登录</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="myModal2">
+                        <div class="modal-dialog" id="myModalDialog2">
+                            <div class="modal-content" style="width:460px;height:500px;">
+                                <div class="modal-header" style="height:81px;background-color: #09a3dc;">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title" id="myModalLabel2" style="line-height: 55px;color:white;">注册</h4>
+                                </div>
+                                <div class="modal-body" style="height:155px;">
+                                    <form method="post" action="first.js">
+                                        <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;margin-top:30px;border: 1px solid gray;">
+                                            <span class="glyphicon glyphicon-phone" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                            <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                                   type="text" id="username2" placeholder=" 手机号"/>
+                                        </p>
+                                        <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;margin-top:10px;border: 1px solid gray;">
+                                            <span class="glyphicon glyphicon-user" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                            <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                                   type="text" id="nicheng" placeholder=" 昵称"/>
+                                        </p>
+                                        <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;margin-top:10px;border: 1px solid gray;">
+                                            <span class="glyphicon glyphicon-lock" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                            <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                                   type="password" id="password2" placeholder=" 密码"/>
+                                        </p>
+                                        <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;margin-top:10px;border: 1px solid gray;">
+                                            <span class="	glyphicon glyphicon-envelope" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                            <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                                   type="email" id="email1" placeholder=" 邮箱"/>
+                                        </p>
+                                        <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;margin-top:10px;border: 1px solid gray;">
+                                            <span class="	glyphicon glyphicon-envelope" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                            <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                                   type="text" id="home" placeholder=" 生源地"/>
+                                        </p><br>
+                                        <button style="width:170px;margin-top: 30px;background-color: #09a3dc;color: white;" type="button" id="ok_btn" onclick="check_validr();" class="btn btn-primary">注册</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="myModal3">
+                        <div class="modal-dialog" id="myModalDialog3">
+                            <div class="modal-content" style="width:460px;height:420px;">
+                                <div class="modal-header" style="height:81px;background-color: #09a3dc;">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    <h4 class="modal-title" id="myModalLabel3" style="line-height:55px;color: white;">管理员登录</h4>
+                                </div>
+                                <div class="modal-body" style="height:155px;">
+                                    <form method="post" action="first.js" style="margin-top: 40px;">
+                                        <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;border: 1px solid gray;">
+                                            <span class="glyphicon glyphicon-phone" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                            <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                                   type="text" id="username3" class="username3" placeholder=" 手机号"/>
+                                        </p>
+                                        <p style="margin-bottom: 0px;width:calc(346px - 10%);height:40px;text-align:center;padding:0px;margin: 0 auto;margin-top:18px;border: 1px solid gray;">
+                                            <span class="glyphicon glyphicon-lock" style="width:20px;height:20px;z-index:5;color: grey;left: 9px;"></span>&nbsp;
+                                            <input style="border-left:1px solid gainsboro;width:260px;height:36px;border-top:0px;border-right:0px;border-bottom:0px;margin-left:13px;"
+                                                   type="password" id="password3" class="password3" placeholder=" 密码"/>
+                                        </p><br>
+                                        <button style="width:170px;margin-top: 60px;background-color: #09a3dc;color: white;" type="button" id="adminlogin_btn" onclick="check_validadmin()" class="btn">管理员登录</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li id="rm9">
+                    <p style="width:80px;/*background-color: rgb(255,255,255);*/margin-bottom:18px;"></p>
+                    <a href="forum.html" target="_parent">
+                        <em style="text-align: center;">Forum<br><b>论坛</b></br></em>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div id="rmain3"></div>
+    </div>
+    <div class="resultindex">
+        <div class="resultindex1">
+            <h3 style="margin:0px;text-align: center;height:90px;line-height: 90px;">研究成果列表</h3>
+            <hr style="margin-top: 0px;">
+            <ul style="margin-top: 40px;width:280px;height:240px;">
+                <li style="margin-top: 30px;">
+                    <a href="#" onclick="fasong(1)">生物质能源与生物基材料</a>
+                </li>
+                <li style="margin-top: 50px;">
+                    <a href="#" onclick="fasong(2)">农业生态与农村环保</a>
+                </li>
+            </ul>
+        </div>
+        <div class="resultindex2">
+
+        </div>
+    </div>
+
+</div>
+<script>
+    function fasong(num) {
+        $.post("",
+            {
+                num:num
+            },function (data) {
+                $("")
+            }
+        )
+    }
+</script>
+<script type="text/javascript" src="./js/first.js"></script>
+</body>
+</html>

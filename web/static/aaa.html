@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+ <title>新建网页</title>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <script src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
+ <style>
+  span{
+   background:gray;
+  }
+  #bj{
+   width:150px;height:100px;background:yellow;
+  }
+  #gz{
+   width:150px;height:100px;background:yellow;
+   display:none;
+  }
+  #cd{
+   width:150px;height:100px;background:yellow;
+   display:none;
+  }
+
+
+ </style>
+</head>
+<body>
+<div>
+ <p>
+  <span>北京|</span>
+  <span>广州|</span>
+  <span>成都</span>
+ </p>
+ <div id="bj">北京北京北京北京北京</div>
+ <div id="gz">广州广州广州广州</div>
+ <div id="cd">成都成都成都成都成都成都</div>
+</div>
+<script>
+ $("span").eq(0).click(function(){
+  $("div").eq(1).css("display","block");
+  $("div").eq(3).css("display","none");
+  $("div").eq(2).css("display","none");
+ })
+
+ $("span").eq(1).click(function(){
+  $("div").eq(2).css("display","block");
+  $("div").eq(3).css("display","none");
+  $("div").eq(1).css("display","none");
+ })
+
+
+ $("span").eq(2).click(function(){
+  $("div").eq(3).css("display","block");
+  $("div").eq(1).css("display","none");
+  $("div").eq(2).css("display","none");
+ })
+</script>
+
+</body>
+</html>
