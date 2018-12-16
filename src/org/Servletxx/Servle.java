@@ -39,7 +39,7 @@ public class Servle extends HttpServlet {
         result = json.toJson(dCount);
         System.out.println();
 //        String result=json.toJson(dCount);
-        result="{\"name\":\"你需我求\",\"data\":"+result+"}";
+        result="{\"name\":\"xxxxxxx\",\"data\":"+result+"}";
         response.getWriter().write( result);
 
     }
